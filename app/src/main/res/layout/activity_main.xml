@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="test.bw.com.griderview.MainActivity">
+    <RelativeLayout
+        android:id="@+id/rl"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+        <ImageView
+            android:id="@+id/iv_user"
+            android:layout_marginTop="7dp"
+            android:layout_width="25dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="35dp"
+            android:background="@drawable/ren"
+            />
+
+        <ImageView
+            android:id="@+id/iv_search"
+            android:layout_marginTop="7dp"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="35dp"
+            android:background="@drawable/search"
+            />
+
+        <ImageView
+            android:id="@+id/iv_home_toplog"
+            android:layout_width="120dp"
+            android:layout_height="35dp"
+            android:background="@drawable/home_toplog"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true" />
+    </RelativeLayout>
+   <ScrollView
+       android:background="#FFFFFF"
+       android:layout_below="@id/rl"
+       android:layout_width="match_parent"
+       android:layout_height="match_parent">
+       <RelativeLayout
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content">
+
+           <test.bw.com.griderview.MyGriderView
+               android:id="@+id/gv"
+               android:horizontalSpacing="1dp"
+               android:verticalSpacing="1dp"
+               android:numColumns="4"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content">
+           </test.bw.com.griderview.MyGriderView>
+           <test.bw.com.griderview.MyListView
+               android:id="@+id/lv"
+               android:layout_below="@id/gv"
+               android:horizontalSpacing="2dp"
+               android:verticalSpacing="2dp"
+               android:layout_marginTop="30dp"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content">
+           </test.bw.com.griderview.MyListView>
+       </RelativeLayout>
+
+   </ScrollView>
+
+</RelativeLayout>
